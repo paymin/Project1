@@ -63,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textWebEmailAddress"
-            android:text="Email" />
+            android:text="Asal" />
 
         <EditText
             android:id="@+id/editTextEmail"
@@ -127,6 +127,31 @@
             android:layout_height="wrap_content"
             android:entries="@array/paket" />
 
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peminjaman Perlengkapan" />
+
+        <CheckBox
+            android:id="@+id/checkBoxT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tenda" />
+
+
+        <CheckBox
+            android:id="@+id/checkBoxN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nesting" />
+
+        <CheckBox
+            android:id="@+id/checkBoxP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pemandu" />
+
         <Button
             android:id="@+id/buttonOk"
             android:layout_width="wrap_content"
@@ -150,5 +175,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="" />
+
+        <TextView
+            android:id="@+id/textViewHasil4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 </ScrollView>
