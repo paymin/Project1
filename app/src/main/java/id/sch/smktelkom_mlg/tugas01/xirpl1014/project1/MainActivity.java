@@ -7,17 +7,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity {
 
     EditText etNama;
     EditText etEmail;
     Button bOk;
-    TextView tvHasil;
-    TextView tvHasil2;
+    TextView tvHasil, tvHasil2, tvHasil3;
     RadioGroup rgJumlah;
-
+    Spinner spPaket;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,28 +30,29 @@ public class MainActivity extends AppCompatActivity {
         bOk = (Button) findViewById(R.id.buttonOk);
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
         tvHasil2 = (TextView) findViewById(R.id.textViewHasil2);
+        tvHasil3 = (TextView) findViewById(R.id.textViewHasil3);
         rgJumlah = (RadioGroup) findViewById(R.id.radioGroupJumlah);
-
-        rgJumlah.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if (i == R.id.radioButtonG) {
-                    findViewById(R.id.jumlah).setVisibility(View.VISIBLE);
-                } else {
-                    findViewById(R.id.jumlah).setVisibility(View.GONE);
-                }
-            }
-        });
-
+        spPaket = (Spinner) findViewById(R.id.spinnerPaket);
 
         bOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 doProcess();
                 doProcess2();
+                doProcess3();
             }
         });
+
     }
+
+    private void doProcess3() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("Anda Memilih Paket ");
+        builder.append(spPaket.getSelectedItem().toString());
+
+        tvHasil3.setText(builder);
+    }
+
 
     private void doProcess2() {
         String nama = etNama.getText().toString();
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (rgJumlah.getCheckedRadioButtonId() == R.id.radioButtonG) {
                 EditText Jumlah = (EditText) findViewById(R.id.editTextJumlah);
-                hasil += "\nJumlah Anggota : " + Jumlah.getText();
+                hasil += "\nJumlah Anggota Grup : " + Jumlah.getText();
             }
         }
 
@@ -79,4 +81,5 @@ public class MainActivity extends AppCompatActivity {
             tvHasil2.setText("Anda Akan Naik Gunung : " + hasil);
         }
     }
+
 }
