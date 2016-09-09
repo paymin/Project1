@@ -69,6 +69,45 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <RadioGroup
+            android:id="@+id/radioGroupJumlah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioButtonS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sendiri" />
+
+            <RadioButton
+                android:id="@+id/radioButtonB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Berdua" />
+
+            <RadioButton
+                android:id="@+id/radioButtonG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bergrup" />
+
+        </RadioGroup>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/jumlah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/editTextJumlah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jumlah Anggota Kelompok"
+                android:inputType="numberSigned" />
+        </android.support.design.widget.TextInputLayout>
+
         <Button
             android:id="@+id/buttonOk"
             android:layout_width="wrap_content"
@@ -80,5 +119,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Text" />
-</LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewHasil2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text" />
+    </LinearLayout>
 </ScrollView>
